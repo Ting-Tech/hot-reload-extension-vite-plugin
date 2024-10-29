@@ -18,5 +18,6 @@ chrome.runtime.onInstalled.addListener((details) => {
 socket.addEventListener('message', (event) => {
   if (event.data === Message.FILE_CHANGE) {
     chrome.runtime.reload();
+    location.reload();
   }
 });
